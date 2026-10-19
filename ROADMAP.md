@@ -26,7 +26,7 @@ One command prints your day: calendar events, GitHub items assigned to you, loca
 
 Each step is one or more small commits (Conventional Commits, one feature per commit).
 
-- [ ] 1. `chore: init cargo project` · `ci: add fmt, clippy and test workflow` · `docs: add README skeleton`
+- [x] 1. `chore: init cargo project` · `ci: add fmt, clippy and test workflow` · `docs: add README skeleton`
 - [ ] 2. `feat(cli): add clap skeleton with today subcommand` (prints a placeholder)
 - [ ] 3. `feat(config): load TOML config from XDG config dir`. Clear error if missing. Check config file permissions (0600): it will hold secrets.
 - [ ] 4. `feat(calendar): parse a local ICS file and list today's events`
