@@ -38,3 +38,9 @@ Never rewrite history: if a decision changes, add a new entry that supersedes th
 - **Reason:** one repository per project; `daybrief` is an application, so a committed lockfile gives reproducible builds.
 - **Alternatives considered:** keeping git's default branch name `master`.
 - **Supersedes / superseded by:** —
+
+### D-005 — clap with the derive API (2026-11-02)
+- **Decision:** parse the command line with `clap` using its derive API (`#[derive(Parser)]`, `#[derive(Subcommand)]`).
+- **Reason:** the CLI shape is a plain Rust type checked by the compiler; doc comments become help text; less code than the builder API. Adding a subcommand means adding an enum variant, and the exhaustive `match` forces handling it.
+- **Alternatives considered:** clap builder API (more flexible at runtime, more verbose); `argh` or `lexopt` (lighter, but less documented and less common).
+- **Supersedes / superseded by:** —
