@@ -44,3 +44,9 @@ Never rewrite history: if a decision changes, add a new entry that supersedes th
 - **Reason:** the CLI shape is a plain Rust type checked by the compiler; doc comments become help text; less code than the builder API. Adding a subcommand means adding an enum variant, and the exhaustive `match` forces handling it.
 - **Alternatives considered:** clap builder API (more flexible at runtime, more verbose); `argh` or `lexopt` (lighter, but less documented and less common).
 - **Supersedes / superseded by:** —
+
+### D-006 — Dual license MIT OR Apache-2.0, public repository (2026-11-02)
+- **Decision:** publish the repository publicly on GitHub under `MIT OR Apache-2.0`.
+- **Reason:** portfolio project meant to be read; dual licensing is the Rust ecosystem convention (rustc, serde, clap): MIT for compatibility with GPLv2 projects, Apache-2.0 for its explicit patent grant. Users pick the one they need.
+- **Alternatives considered:** MIT only (simpler, no patent clause); Apache-2.0 only (incompatible with GPLv2); private repository until v0.1.0.
+- **Supersedes / superseded by:** —
